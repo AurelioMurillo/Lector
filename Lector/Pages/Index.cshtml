@@ -1,0 +1,97 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="content-fluid">
+    <form method="post" class="col-sm-12">
+    <div class="d-flex justify-content-center align-items-md-center" style="min-height:100vh">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="display-4 text-center">LOGO</h1>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="input-field">
+                            <label asp-for="CamposEvaluar" class="control-label active">Campos a evaluar</label>
+                            <select asp-for="CamposEvaluar" class="select">
+                                @for (int i = 1; i<=20; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-field">
+                            <label asp-for="NumMuestras" class="control-label active">Muestras</label>
+                            <select asp-for="NumMuestras" class="select">
+                                @for (int i = 1; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h5 class="text-center mb-4">Células a evaluar</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <p>
+                            <label>
+                                <input type="checkbox" asp-for="Leucocitos" />
+                                <span>Leucocitos</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" asp-for="Eritrocitos" />
+                                <span>Eritrocitos</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" asp-for="Cristales" />
+                                <span>Cristales</span>
+                            </label>
+                        </p>
+
+                    </div>
+                    <div class="col-6">
+                        <p>
+                            <label>
+                                <input type="checkbox" asp-for="Cilindros" />
+                                <span>Cilindros</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" asp-for="CelTracto" />
+                                <span>Células del tracto urinario</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center text-lg-start">
+                    <button type="submit" class="btn btn-primary-lector me-4 mb-4" onclick="showLoader();">
+                        Empezar lectura
+                    </button>
+                    <button class="btn btn-secondary-lector me-4 mb-4" onclick="showLoader();">
+                        Archivos almacenados
+                    </button>
+                    <button type="submit" class="btn btn-secondary-lector me-4 mb-4" onclick="showLoader();">
+                        Sincronizar conexión
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </form>
+</div>
+
+<style>
+    ul.select-dropdown{
+        height: 325px;
+    }
+</style>

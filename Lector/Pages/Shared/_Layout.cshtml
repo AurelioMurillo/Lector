@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lector</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="~/css/Materialize/Materialize.css" />
+    <link rel="stylesheet" href="~/css/MDBootstrap/mdb.min.css" />
+    <link rel="stylesheet" href="~/css/Datatables/datatables.min.css" />
+    <link rel="stylesheet" href="~/css/FontAwesome/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/sweetalert2.min.css" /> 
+
+    
+</head>
+<body class="bg-platinum">
+    <div class="container-fluid">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    <div class="Controlspinner"></div>
+    <script type="text/javascript" src="~/js/MDBootstrap/mdb.min.js"></script>
+    <script type="text/javascript" src="~/js/Jquery/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="~/js/Materialize/materialize.min.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
+    <script type="text/javascript" src="~/js/FontAwesome/all.min.js"></script>
+    <script type="text/javascript" src="~/js/Datatables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/js/Datatables/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="~/js/sweetalert2.all.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

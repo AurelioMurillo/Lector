@@ -1,0 +1,28 @@
+﻿@page
+@model Lector.Pages.FinishModel
+<div class="content-fluid">
+    <form method="post" class="col-sm-12">
+        <div class="d-flex justify-content-center align-items-md-center" style="height:100vh">
+            <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <h1 class="display-4 text-center">LOGO</h1>
+                    <div class="swal2-icon swal2-success swal2-icon-show" style="display: flex;">
+                        <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                        <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
+                        <div class="swal2-success-ring"></div> <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                        <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                    </div>
+                    <h4 class="text-center my-4">Lectura finalizada</h4>
+                    <div class="text-center text-lg-start">
+                        <button type="submit" class="btn btn-primary-lector me-4 mb-4" onclick="showLoader();">
+                            Revisión de resultados
+                        </button>
+                        <button class="btn btn-secondary-lector me-4 mb-4" onclick="showLoader();">
+                            Ingresar datos del paciente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,64 @@
+﻿@page
+@model Lector.Pages.ResultModel
+<div class="content-fluid">
+    <form method="post" class="col-sm-12">
+        <div class="d-flex justify-content-center align-items-md-center" style="height:100vh">
+            <div class="card">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <a class="btn-floating waves-effect waves-light bg-primary-bankaool tooltipped" data-mdb-tooltip-init="" title="Imprimir" data-mdb-placement="right" data-tooltip="Imprimir">
+                        <i class="fas fa-print " style="font-size: 20px;padding: 10px 0 0 10px;"></i>
+                    </a>
+                    <h1 class="display-4 text-center">LOGO</h1>
+                    <h4 class="text-center my-4">Revisión de resultados</h4>
+                    <hr />
+                    <div class="text-start">
+                        <p>
+                            <b>Número de campos:</b> @Model.Modelo.CamposEvaluar
+                        </p>
+                        <p>
+                            <b>Número de muestras:</b> @Model.Modelo.NumMuestras
+                        </p>
+                        @if(Model.Modelo.Leucocitos){
+                            <p>
+                                <b>Leucocitos:</b> Positivo
+                            </p>
+                        }
+                        @if (Model.Modelo.Eritrocitos)
+                        {
+                            <p>
+                                <b>Eritrocitos:</b> Negativo
+                            </p>
+                        }
+                        @if (Model.Modelo.Cristales)
+                        {
+                            <p>
+                                <b>Cristales:</b> Negativo
+                            </p>
+                        }
+                        @if (Model.Modelo.Cilindros)
+                        {
+                            <p>
+                                <b>Cilindros:</b> Positivo
+                            </p>
+                        }
+                        @if (Model.Modelo.CelTracto)
+                        {
+                            <p>
+                                <b>Células del tracto urinario:</b> Positivo
+                            </p>
+                        }
+                    </div>
+                    
+                    <div class="text-center text-lg-start">
+                        <button type="submit" class="btn btn-primary-lector me-4 mb-4" onclick="showLoader();">
+                            Nueva Lectura
+                        </button>
+                        <button class="btn btn-secondary-lector me-4 mb-4" onclick="showLoader();">
+                            Calibrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
