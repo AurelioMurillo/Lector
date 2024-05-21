@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ad033058104449e618021a4f1ee1d78e7752465")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
